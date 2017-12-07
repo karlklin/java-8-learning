@@ -1,4 +1,4 @@
-package java8.in.action.example;
+package java8.in.action.example.trader;
 
 public class Trader {
 

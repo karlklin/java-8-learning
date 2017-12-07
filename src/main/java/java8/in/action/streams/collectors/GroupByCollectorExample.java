@@ -1,13 +1,13 @@
 package java8.in.action.streams.collectors;
 
-import java8.in.action.example.Transaction;
-import java8.in.action.example.TransactionType;
+import java8.in.action.example.trader.Transaction;
+import java8.in.action.example.trader.TransactionType;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.*;
-import static java8.in.action.example.Transaction.getTransactions;
+import static java8.in.action.example.trader.Transaction.getTransactions;
 
 public class GroupByCollectorExample {
 

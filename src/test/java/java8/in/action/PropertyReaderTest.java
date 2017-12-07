@@ -1,6 +1,6 @@
 package java8.in.action;
 
-import java8.in.action.optional.example2.PropertyReader;
+import java8.in.action.optional.PropertyReader;
 import org.junit.Before;
 import org.junit.Test;
 

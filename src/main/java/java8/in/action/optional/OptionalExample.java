@@ -1,4 +1,8 @@
-package java8.in.action.optional.example;
+package java8.in.action.optional;
+
+import java8.in.action.example.insurance.Car;
+import java8.in.action.example.insurance.Insurance;
+import java8.in.action.example.insurance.Person;
 
 import java.util.Optional;
 

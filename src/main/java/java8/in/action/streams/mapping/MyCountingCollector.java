@@ -1,6 +1,6 @@
 package java8.in.action.streams.mapping;
 
-import java8.in.action.example.Transaction;
+import java8.in.action.example.trader.Transaction;
 
 import java.util.Collections;
 import java.util.EnumSet;

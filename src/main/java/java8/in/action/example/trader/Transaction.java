@@ -1,6 +1,4 @@
-package java8.in.action.example;
-
-import java8.in.action.example.Trader;
+package java8.in.action.example.trader;
 
 import java.util.Arrays;
 import java.util.List;

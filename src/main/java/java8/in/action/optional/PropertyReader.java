@@ -1,4 +1,4 @@
-package java8.in.action.optional.example2;
+package java8.in.action.optional;
 
 import java.util.Optional;
 import java.util.Properties;

@@ -1,7 +1,7 @@
 package java8.in.action.streams;
 
-import java8.in.action.example.Trader;
-import java8.in.action.example.Transaction;
+import java8.in.action.example.trader.Trader;
+import java8.in.action.example.trader.Transaction;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.joining;

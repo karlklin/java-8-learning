@@ -3,7 +3,7 @@ package java8.in.action.streams.collectors;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import java8.in.action.example.Transaction;
+import java8.in.action.example.trader.Transaction;
 
 import static java.util.stream.Collectors.*;
 
