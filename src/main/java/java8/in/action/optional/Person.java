@@ -1,4 +1,4 @@
-package java8.in.action.example.insurance;
+package java8.in.action.optional;
 
 import java.util.Optional;
 
@@ -12,6 +12,10 @@ public class Person {
         return car;
     }
 
+    public Car getCar2() {
+        return getCar().get();
+    }
+
     public void setCar(Optional<Car> car) {
         this.car = car;
     }
@@ -23,6 +27,5 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
-
 
 }

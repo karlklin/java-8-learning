@@ -1,6 +1,6 @@
 package java8.in.action;
 
-import java8.in.action.optional.PropertyReader;
+import java8.in.action.optional.OptionalPropertyReaderExample;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,17 +11,18 @@ import static org.junit.Assert.assertEquals;
 
 public class PropertyReaderTest {
 
-    private PropertyReader reader;
+    private OptionalPropertyReaderExample reader;
     private Properties properties;
 
     @Before
     public void setUp() {
-        reader = new PropertyReader();
+        reader = new OptionalPropertyReaderExample();
         properties = new Properties();
 
         properties.setProperty("a", "-3");
         properties.setProperty("b", "0");
         properties.setProperty("c", "5");
+        properties.setProperty("e", "dsdsfds");
     }
 
     @Test
@@ -30,6 +31,8 @@ public class PropertyReaderTest {
         assertEquals(0, reader.readDurationImperative(properties, "b"));
         assertEquals(5, reader.readDurationImperative(properties, "c"));
         assertEquals(0, reader.readDurationImperative(properties, "d"));
+        assertEquals(0, reader.readDurationImperative(properties, "e"));
+
     }
 
     @Test
@@ -38,6 +41,7 @@ public class PropertyReaderTest {
         assertEquals(0, reader.readDurationDeclarative(properties, "b"));
         assertEquals(5, reader.readDurationDeclarative(properties, "c"));
         assertEquals(0, reader.readDurationDeclarative(properties, "d"));
+        assertEquals(0, reader.readDurationDeclarative(properties, "e"));
 
     }
 

@@ -1,4 +1,4 @@
-package java8.in.action.example.insurance;
+package java8.in.action.optional;
 
 import java.util.Optional;
 
