@@ -2,7 +2,6 @@ package other;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 import java.util.TreeSet;
 
 class MyCar {
@@ -38,7 +37,7 @@ class MyCar {
 
 public class
 
-CollectionsExample {
+CollectionsAndHashCodeExample {
 
     public static void main(String[] args) {
         TreeSet<String> treeSet = new TreeSet<>();
@@ -46,8 +45,9 @@ CollectionsExample {
         treeSet.add("A");
         treeSet.add("C");
         treeSet.add("B");
+        treeSet.add("A");
 
-        System.out.println(treeSet);
+        System.out.println("Set: " + treeSet);
 
         Map<String, MyCar> name2CarMap = new HashMap<>();
         MyCar carA = new MyCar("a");
@@ -55,19 +55,24 @@ CollectionsExample {
         name2CarMap.put("b", new MyCar("b"));
         name2CarMap.put("c", new MyCar("c"));
 
-        System.out.println(name2CarMap);
-        System.out.println(name2CarMap.get("a") == carA);
-
-        // if we remove hashCode from MyCar then equaled objects are stored under different hashCode and the HashMap doesn't fulfil its contract and
+        System.out.println("Map" + name2CarMap);
+        System.out.println("Equaled? " + (name2CarMap.get("a") == carA));
 
         Map<MyCar, String> car2NameMap = new HashMap<>();
-        MyCar newCarA = new MyCar("a");
+        MyCar theSameCarA = new MyCar("a");
+
+        // since Cars A are the same should be put for under the same hash code in the hash map
+        // if we remove hashCode from MyCar then equaled objects are stored under different hashCode and the HashMap doesn't fulfil its contract and
+
+        System.out.println(theSameCarA.equals(carA));
 
         car2NameMap.put(carA, "carAName");
-        car2NameMap.put(newCarA, "carANewName");
+        car2NameMap.put(theSameCarA, "theSameCarA");
 
-        System.out.println(car2NameMap);
+        System.out.println("Map with new car A" + car2NameMap);
         System.out.println(car2NameMap.get(carA));
-        System.out.println(car2NameMap.get(newCarA));
+        System.out.println(car2NameMap.get(theSameCarA));
+
+        System.out.println(car2NameMap.get(carA) == car2NameMap.get(theSameCarA));
     }
 }
