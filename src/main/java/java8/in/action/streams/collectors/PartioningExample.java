@@ -1,6 +1,6 @@
 package java8.in.action.streams.collectors;
 
-import java8.in.action.example.trader.Transaction;
+import java8.in.action.streams.model.Transaction;
 
 import java.util.List;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package java8.in.action.example.trader;
+package java8.in.action.streams.model;
 
 import java.util.Arrays;
 import java.util.List;

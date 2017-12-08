@@ -9,7 +9,7 @@ import java.util.Properties;
 import static org.junit.Assert.assertEquals;
 
 
-public class PropertyReaderTest {
+public class OptionalPropertyReaderExampleTest {
 
     private OptionalPropertyReaderExample reader;
     private Properties properties;

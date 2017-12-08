@@ -1,4 +1,4 @@
-package java8.in.action.example.trader;
+package java8.in.action.streams.model;
 
 public enum TransactionType {
         LOW, MEDIUM, LARGE
