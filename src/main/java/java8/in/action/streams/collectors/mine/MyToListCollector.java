@@ -1,4 +1,4 @@
-package java8.in.action.streams;
+package java8.in.action.streams.collectors.mine;
 
 import java8.in.action.streams.model.Transaction;
 
