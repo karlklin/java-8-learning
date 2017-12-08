@@ -6,12 +6,14 @@ import java8.in.action.streams.model.Transaction;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.OptionalInt;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static java.util.Comparator.comparing;
 import static java.util.Comparator.comparingInt;
+import static java.util.stream.Collectors.maxBy;
 
 public class BasicStreamExample {
 
@@ -68,11 +70,14 @@ public class BasicStreamExample {
 		Optional<Transaction> maxValue = transactions.stream()
 				.max(Comparator.comparingInt(Transaction::getValue));
 
-		transactions.stream()
+		Optional<Integer> maxValue2 = transactions.stream()
 				.map(transaction -> transaction.getValue())
 				.reduce(Integer::max);
 
-		transactions.stream()
+		Optional<Transaction> maxValue3 = transactions.stream()
+				.collect(maxBy(Comparator.comparingInt(Transaction::getValue)));
+
+		OptionalInt maxValue4 = transactions.stream()
 				.mapToInt(Transaction::getValue).max();
 
 	}
