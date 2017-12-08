@@ -33,7 +33,6 @@ class Aggregator {
 
 public class MyCountingCollector<T> implements Collector<T, Aggregator, Long> {
 
-
     @Override
     public Supplier<Aggregator> supplier() {
         return Aggregator::new;
