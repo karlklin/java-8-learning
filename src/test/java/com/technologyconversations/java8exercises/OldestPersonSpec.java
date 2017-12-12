@@ -19,7 +19,7 @@ class OldestPersonSpec {
     }
 
     @Test
-    public void getOldestPersonShouldReturnOldestPerson() {
+    void getOldestPersonShouldReturnOldestPerson() {
         Person sara = new Person("Sara", 4);
         Person victor = new Person("Viktor", 40);
         Person eva = new Person("Eva", 42);
