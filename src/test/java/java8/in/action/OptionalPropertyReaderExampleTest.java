@@ -3,11 +3,11 @@ package java8.in.action;
 import java8.in.action.optional.OptionalPropertyReaderExample;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 
 import java.util.Properties;
 
 import static org.junit.Assert.assertEquals;
-
 
 public class OptionalPropertyReaderExampleTest {
 
@@ -42,7 +42,11 @@ public class OptionalPropertyReaderExampleTest {
         assertEquals(5, reader.readDurationDeclarative(properties, "c"));
         assertEquals(0, reader.readDurationDeclarative(properties, "d"));
         assertEquals(0, reader.readDurationDeclarative(properties, "e"));
+    }
 
+    @org.junit.jupiter.api.Test
+    void testcase() {
+        Assertions.assertTrue(true);
     }
 
 }
