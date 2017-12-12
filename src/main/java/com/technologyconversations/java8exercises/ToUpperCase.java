@@ -6,6 +6,6 @@ import java.util.stream.Collectors;
 public class ToUpperCase {
 
     public List<String> transform(List<String> toTransform) {
-        return toTransform.stream().map(s -> s.toUpperCase()).collect(Collectors.toList());
+        return toTransform.stream().map(s -> s.toUpperCase()).peek(s -> {}).collect(Collectors.toList());
     }
 }
