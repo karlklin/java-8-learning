@@ -4,9 +4,15 @@ import java.util.Optional;
 
 public class Person {
 
+    private final String name;
     private int age;
 
     private Optional<Car> car;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
     public Optional<Car> getCar() {
         return car;
@@ -26,6 +32,10 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getName() {
+        return name;
     }
 
 }

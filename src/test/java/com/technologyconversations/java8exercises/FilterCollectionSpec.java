@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 /*
 Filter collection so that only elements with less then 4 characters are returned.
  */
-public class FilterCollectionSpec {
+class FilterCollectionSpec {
 
     private FilterCollection filterCollection;
 
